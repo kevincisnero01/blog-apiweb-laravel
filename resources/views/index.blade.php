@@ -15,6 +15,8 @@
                     <div class="bg-white hover:gb-blue-100 border border-gray-200 p-3">    
                         <h2 class="font-bold text-lg mb-4">{{ $post->title }}</h2>
                         <p class="text-xs"> {{ $post->excerpt}}</p>
+                        <br>
+                        <p class="text-xs float-left"> {{ $post->created_at->diffForHumans() }}</p>
                         <p class="text-xs text-right"> {{ $post->published_at }} </p>
                     </div>    
                 @endforeach
