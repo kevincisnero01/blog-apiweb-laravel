@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\PostController;
+use App\Http\Controllers\Web\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,8 @@ use App\Http\Controllers\Web\PostController;
 */
 
 Route::get('/', [PostController::class ,'index'] );
+
+Route::resource('/users', UserController::class)->names('users');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
